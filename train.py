@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Sat May  2 16:19:14 2020
-
-@author: Anuj
-"""
-# making the imports
 import numpy as np
 import matplotlib.pyplot as plt
 from tensorflow.keras.layers import Input,Conv2D,MaxPooling2D,Dropout,Flatten,Dense,Activation,BatchNormalization,add
