@@ -60,4 +60,4 @@ def home():
     return render_template('home.html',filename='unnamed.png')
 
 if __name__=="__main__":
-    app.run(debug=False, host=0.0.0.0)
+    app.run(debug=False, host='0.0.0.0')
