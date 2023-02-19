@@ -30,7 +30,7 @@ def makePredictions(path):
   rgbimg = rgbimg.reshape((1,224,224,3))
   predictions = model.predict(rgbimg)
   a = int(np.argmax(predictions))
-  if a==1:
+  if a > 0.8:
     a = "pneumonic"
   else:
     a="healthy"
