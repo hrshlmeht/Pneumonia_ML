@@ -47,7 +47,7 @@ def home():
             phonenumber = request.form['phoneNumber']
             dictToSend={
                 'phoneNumber':phonenumber,
-                'recordType':'X-Ray'
+                'recordType':'X-Ray_Lung'
             }
             res = requests.post('https://e-hospital-prod.herokuapp.com/imageRetrieveByPhoneNumber', json=dictToSend)
             dictFromServer = res.json()

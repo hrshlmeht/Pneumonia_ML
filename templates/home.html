@@ -2,6 +2,8 @@
 
 {% block content%}
 <center><img src="{{ url_for('static', filename= filename) }}" alt="" style="width: 100px; height:100px;"></center>
+
+
 <br>
 <br>
 {% if show==True %}
@@ -18,25 +20,41 @@
     <br>
 
     <a href="/" class="btn btn-info" role="button">Go Back</a>
+
 </center>
 {% else %}
 <center>
     <form action="/" method="POST" enctype="multipart/form-data">
-        <label for="file">Please Upload Image for Chest X-Ray: </label>
+        <label for="file">If new user , please upload the XRAY Image here: </label>
         <input type="file" name="img" id="img">
-        <label >Enter the id of patient if already regsitered: </label>
+        <br>
+        <br>
+         <button type="submit" class="btn btn-primary ml-3">Submit</button>
+        <br>
+        <br>
+        <label >If patient is existing, please enter Patient ID: </label>
         <input type="string" name="phoneNumber" id="phoneNumber">
+
+        <br>
+        <br>
         <button type="submit" class="btn btn-primary ml-3">Submit</button>
     </form>
     <br>
     <br>
     <br>
+    <script>
+        <img src="templates/Lungs.gif">
+    </script>
+
+
 <!--    <form action="/" method="POST" enctype="multipart/form-data">-->
 <!--        <label >Enter the id of patient if already regsitered: </label>-->
 <!--        <input type="string" name="phoneNumber" id="phoneNumber">-->
 <!--    </form>-->
     <br>
     <br>
+
+
 </center>
 {% endif %}
 {% endblock%}
